@@ -1,0 +1,176 @@
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: 'Helvetica', Arial, sans-serif;
+	font-size: 17px;
+	line-height: 1.5;
+}
+textarea{
+  font-size: 19px;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	padding: 1em 0;
+}
+/* h1, h2, h3: color: IndianRed;*/
+
+p {
+	margin: 0;
+	padding: 1em 0;
+}
+h1,h2,h3{
+    color: IndianRed;
+    text-align: center;
+  }
+  
+  body {
+    margin: 0;
+    color: #f9f9f9;
+    background-color: #3c3c3c;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  *{
+     
+    -webkit-box-sizing: border-box ;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+    /*csslint box-sizing: false*/
+  }
+
+  .justifyMiddle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+  }
+  .middleSide{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+  }
+  .gitCodeAddress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+  }
+  .generalSpeak{
+    justify-content: center;
+    padding: 1em;
+  }
+  
+  /*        
+    text-align: justify;
+   */
+
+   .generalSpeak{
+    justify-content: center;
+    padding: 1em;
+  }
+
+  .definition{
+    padding: 1em;
+  }
+  .site-title {
+    margin: 1em 0 0;
+    padding: 0;
+    font-size: 1.5625em;
+    font-family: Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #c96;
+  }
+
+  .page-title {
+    text-align: center;
+    background-image: url(https://2017.europe.wordcamp.org/files/2017/01/background-pattern-01.png);
+    background-color: #f5ebe0;
+    font-size: 36px;
+    line-height: 1.5;
+    color: #404040;
+  }
+
+  .contentTitle{
+    margin: 0;
+    padding: 0;
+    line-height: 1.3em;
+  }
+  .contentMyText{
+    margin: .5em 0;
+    padding: 0;
+    text-align: justify;
+    padding: 1em;
+  }
+
+  @supports not (display: grid)
+    {
+        .page-title,
+        .definition,
+        .generalSpeak,
+        .cards{
+            max-width: 50em;
+            margin: 0 auto;
+        }
+    }
+
+  @supports (display: grid){
+    @media screen and (min-width: 800px) {
+      .site {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+          "content-head content-head"
+          "definition generalSpeak"
+          "cards cards";
+      }
+    }
+
+    .page-title {
+      grid-area: content-head;
+  }
+
+    .definition {
+        grid-area: definition;
+    }
+
+    .generalSpeak {
+        grid-area: generalSpeak;
+    }
+    .cards{
+        grid-area: cards;
+    }
+
+    @media screen and (min-width: 1200px){
+        .site {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+              "content-head content-head content-head"
+                "definition generalSpeak generalSpeak"
+                "cards cards cards";
+        }
+    }
+        
+    
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .flex-container > div {
+    background-color:#c96;
+    width: 360px;
+    margin: 10px;
+  }

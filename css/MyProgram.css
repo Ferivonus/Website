@@ -1,0 +1,54 @@
+th {
+  padding: 0.4em;
+  color: indianred;
+    
+}
+
+/* Writing middle side */
+.MyProgramDetailed td {
+  padding: 0.34em 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.MyProgram td {
+  padding: 0.34em 0;
+  text-align: center;
+  vertical-align: middle;
+}
+/* Modifying */
+
+.MyProgram, .MyProgram th, .MyProgram td, .MyProgramDetailed, .MyProgramDetailed th, .MyProgramDetailed td{
+  border:1px solid #ffc5c0;
+  border-collapse: collapse;
+  font-size:20px;
+  font-family: 'Helvetica', Arial, sans-serif;
+}
+
+/* Coordinating */
+
+.MyProgramDetailed th, .MyProgramDetailed td {
+  width: 40px;
+}
+
+.MyProgram th,.MyProgram td {
+  width:11.1111111111%;
+}
+/* Making it for mobile */
+
+@media (min-width:650px) {
+  .MyProgram{
+    width:80%;
+    float:none;
+    margin:auto;
+    margin-top:30px;
+    margin-bottom:30px;
+  }
+  .MyProgramDetailed{
+    width:40px;
+    float:none;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:30px;
+  }
+}

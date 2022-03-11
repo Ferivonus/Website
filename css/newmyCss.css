@@ -1,0 +1,130 @@
+h1,h2,h3{
+    color: IndianRed;
+    text-align: center;
+  }
+  
+  body {
+    margin: 0;
+    color: #f9f9f9;
+    background-color: #3c3c3c;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  *{
+     
+    -webkit-box-sizing: border-box ;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+    /*csslint box-sizing: false*/
+  }
+  
+  /*
+  
+  middle 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+  */
+
+  
+  
+  /* Create three unequal columns that floats next to each other */
+  .column {
+    float: left;
+    padding: 16px;
+  }
+  
+  /* Left and right column */
+  .column.threeside {
+    width: 25%;
+  }
+  
+  /* Middle column */
+  .column.threemiddle {
+    text-align: center;
+    width: 50%;
+  }
+  .column.twoside{
+    width: 33%;
+    text-align: center;
+
+  }
+  .column.twoside.empty{
+    width: 34%;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .center {
+    float:inherit;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column.threeside, .column.threemiddle, .middle,.column.twoside,.column.twoside.empty,.center
+     {
+      width: 100%;
+    }
+  }
+  
+  ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #787878;}
+  
+  ul.topnav li { float: left; }
+  
+  ul.topnav li a, ul.topnav .dropbtn {
+    display: block;
+    color: #FFFF;
+    text-transform:uppercase;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  ul.topnav li.right {float: right;}
+  
+  ul.topnav li a.active {background-color: #04AA6D;}
+  
+  ul.topnav li a:hover, ul.topnav .dropdown:hover {
+    background-color: IndianRed;
+  }
+  ul.topnav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  ul.topnav .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: IndianRed;
+    text-align: left;
+  }
+  
+  ul.topnav .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  ul.topnav .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  @media screen and (max-width: 600px) {
+    ul.topnav li.right, ul.topnav li .dropdown,
+    ul.topnav li {float: none;}
+  }

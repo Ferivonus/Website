@@ -1,0 +1,158 @@
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: 'Helvetica', Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	padding: 1em 0;
+}
+/* h1, h2, h3: color: IndianRed;*/
+
+p {
+	margin: 0;
+	padding: 1em 0;
+}
+h1,h2,h3{
+    color: IndianRed;
+    text-align: center;
+  }
+  
+  body {
+    margin: 0;
+    color: #f9f9f9;
+    background-color: #3c3c3c;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  *{
+     
+    -webkit-box-sizing: border-box ;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+    /*csslint box-sizing: false*/
+  }
+
+  /*  added  */
+
+  .justifyMiddle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+  }
+  .middleSide{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .site-title {
+    margin: 1em 0 0;
+    padding: 0;
+    font-size: 1.5625em;
+    font-family: Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #c96;
+  }
+
+  .page-title {
+    text-align: center;
+    background-image: url(https://2017.europe.wordcamp.org/files/2017/01/background-pattern-01.png);
+    background-color: #f5ebe0;
+    font-size: 36px;
+    line-height: 1.5;
+    color: #404040;
+  }
+
+  .contentTitle{
+    margin: 0;
+    padding: 0;
+    line-height: 1.3em;
+  }
+  .contentMyText{
+    margin: .5em 0;
+    padding: 0;
+    text-align: justify;
+    font-size: 1em;
+
+  }
+  .leftSide, .rightSide, .ToTalk, .Program{
+    padding: 2em;
+  }
+
+
+  @supports not (display: grid)
+    {
+        .page-title,
+        .main-content,
+        .sidebar{
+            max-width: 50em;
+            margin: 0 auto;
+        }
+    }
+
+  @supports (display: grid){
+    @media screen and (min-width: 600px) {
+      .site {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr auto 1fr auto;
+        grid-template-areas:
+          "content-head content-head"
+          "leftSide rightSide"
+          "middlePicture middlePicture"
+          "ToTalk ToTalk"
+          "program program";
+      }
+    }
+
+    .page-title {
+      grid-area: content-head;
+  }
+
+    .leftSide {
+        grid-area: leftSide;
+    }
+
+    .rightSide {
+        grid-area: rightSide;
+    }
+    .middlePicture{
+        grid-area: middlePicture;
+    }
+    .ToTalk{
+      grid-area: ToTalk;
+    }
+    .Program{
+      grid-area: program;
+    }
+    @media screen and (min-width: 1200px){
+        .site {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto 1fr auto auto;
+            grid-template-areas:
+              "content-head content-head content-head"
+                "leftSide middlePicture rightSide"
+                "ToTalk ToTalk ToTalk"
+                "program program program";
+        }
+    }
+        
+    
+}
